@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "845671012009",
+    "project_id": "security-system-bf13f",
+    "storage_bucket": "security-system-bf13f.appspot.com",
+    "databaseURL": "https://security-system-bf13f-default-rtdb.firebaseio.com/"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845671012009:android:f6d0abe0184d4e17007bb8",
+        "android_client_info": {
+          "package_name": "com.example.laseralarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845671012009-oe2d0dn4msvoorta5n7saqu8oqdktjdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2XmMTM6STNUN_je0KhV_Ycq-mzIkpyG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845671012009-oe2d0dn4msvoorta5n7saqu8oqdktjdu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "845671012009-aebc2isqbk85l84b744o83tdon1pq009.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.laseralarm"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
