@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '845671012009',
     projectId: 'security-system-bf13f',
     storageBucket: 'security-system-bf13f.appspot.com',
-    iosClientId: '845671012009-aebc2isqbk85l84b744o83tdon1pq009.apps.googleusercontent.com',
+    iosClientId:
+        '845671012009-aebc2isqbk85l84b744o83tdon1pq009.apps.googleusercontent.com',
     iosBundleId: 'com.example.laseralarm',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '845671012009',
     projectId: 'security-system-bf13f',
     storageBucket: 'security-system-bf13f.appspot.com',
-    iosClientId: '845671012009-aebc2isqbk85l84b744o83tdon1pq009.apps.googleusercontent.com',
+    iosClientId:
+        '845671012009-aebc2isqbk85l84b744o83tdon1pq009.apps.googleusercontent.com',
     iosBundleId: 'com.example.laseralarm',
   );
 }

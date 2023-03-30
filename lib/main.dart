@@ -10,8 +10,6 @@ import 'database.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  final fcmToken = await FirebaseMessaging.instance.getToken();
-  print(fcmToken);
   runApp(const MyApp());
 }
 
@@ -41,9 +39,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool isAlert = false;
+  String deviceToken = "";
   @override
   Widget build(BuildContext context) {
-    final database = FirebaseDatabaseService();
     DatabaseReference ref = FirebaseDatabase.instance.ref("security/isAlert");
     ref.onValue.listen((DatabaseEvent event) {
       final Object? data = event.snapshot.value;
@@ -58,10 +56,14 @@ class _MyHomePageState extends State<MyHomePage> {
       FirebaseDatabase.instance.ref().update(updates);
     }
 
+    FirebaseMessaging.instance.getToken().then((fcmToken) => {
+          setState(() {
+            deviceToken = fcmToken!;
+          })
+        });
+
     return Scaffold(
         appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
         body: Center(
@@ -72,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   'This is an application to demonstrate laser security alarm.\n\nDeveloped By : Aayush Solanki\nCoordinated By : Harsh Solanki and Kaif',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-              const SizedBox(height: 150),
+              const SizedBox(height: 100),
               ElevatedButton(
                   onPressed: offAlert,
                   style: ElevatedButton.styleFrom(
@@ -87,7 +89,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ? const Text('Alert! Laser interruption detected',
                       style: TextStyle(
                           color: Colors.red, fontWeight: FontWeight.bold))
-                  : const SizedBox(height: 40)
+                  : const SizedBox(height: 0),
+              const SizedBox(height: 100),
+              Text('FCM Token : '),
+              SelectableText(deviceToken)
             ],
           ),
         ));
