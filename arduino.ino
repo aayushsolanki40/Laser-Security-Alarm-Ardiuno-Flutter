@@ -14,8 +14,8 @@ bool alert = false;
 // Insert Firebase project API Key
 #define API_KEY "AIzaSyAhzvBhSNftA8rqOQzZaHjM7rHyd8yCzkk"
 #define DATABASE_URL "https://firstoffer-e4d08-default-rtdb.firebaseio.com/"
-#define USER_EMAIL "aayushsolanki40@gmail.com"
-#define USER_PASSWORD "Aayush@02112001"
+#define USER_EMAIL "yourmemail@gmail.com"
+#define USER_PASSWORD "yourmemail@02112001"
 
 //Define Firebase Data object
 FirebaseData fbdo;
